@@ -1,0 +1,17 @@
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer__contacts,
+.footer__links,
+.footer__payment {
+  margin-bottom: 20px;
+}
+
+.footer__links a {
+  color: #fff;
+  margin-right: 15px;
+  text-decoration: none;
+}
