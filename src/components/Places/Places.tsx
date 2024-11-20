@@ -53,6 +53,33 @@ const settings = {
   ],
 };
 
+const placesData = [
+  {
+    href: "https://myapsny.ru/location/%d0%b0%d0%b1%d1%85%d0%b0%d0%b7%d0%b8%d1%8f/%d0%be%d0%b7%d0%b5%d1%80%d0%be-%d1%80%d0%b8%d1%86%d0%b0",
+    src: "/wp-content/uploads/2024/05/riczaa-400x400.webp",
+    alt: "Озеро Рица",
+    name: "Озеро Рица",
+  },
+  {
+    href: "https://myapsny.ru/location/%d0%b0%d0%b1%d1%85%d0%b0%d0%b7%d0%b8%d1%8f/gagra",
+    src: "/wp-content/uploads/2022/04/гагра-главная-400x400.jpg",
+    alt: "Гагра",
+    name: "Гагра",
+  },
+  {
+    href: "https://myapsny.ru/location/%d0%b0%d0%b1%d1%85%d0%b0%d0%b7%d0%b8%d1%8f/picunda",
+    src: "/wp-content/uploads/2022/04/пицунда-главная-400x400.jpg",
+    alt: "Пицунда",
+    name: "Пицунда",
+  },
+  {
+    href: "https://myapsny.ru/location/%d0%b0%d0%b1%d1%85%d0%b0%d0%b7%d0%b8%d1%8f/novyj-afon",
+    src: "/wp-content/uploads/2024/08/afon-400x400.jpg",
+    alt: "Новый Афон",
+    name: "Новый Афон",
+  },
+];
+
 export default function Places() {
   return (
     <section className="container__fluid container__silver">
@@ -60,55 +87,16 @@ export default function Places() {
         Где отдохнуть? Выберите направление сейчас!
       </h2>
 
-      <Slider {...settings} className="categories">
-        <Place
-          href="https://myapsny.ru/location/%d0%b0%d0%b1%d1%85%d0%b0%d0%b7%d0%b8%d1%8f/%d0%be%d0%b7%d0%b5%d1%80%d0%be-%d1%80%d0%b8%d1%86%d0%b0"
-          src="/wp-content/uploads/2024/05/riczaa-400x400.webp"
-          alt="Озеро Рица"
-          name="Озеро Рица"
-        />
-        <Place
-          href="https://myapsny.ru/location/%d0%b0%d0%b1%d1%85%d0%b0%d0%b7%d0%b8%d1%8f/gagra"
-          src="/wp-content/uploads/2022/04/гагра-главная-400x400.jpg"
-          alt="Гагра"
-          name="Гагра"
-        />
-        <Place
-          href="https://myapsny.ru/location/%d0%b0%d0%b1%d1%85%d0%b0%d0%b7%d0%b8%d1%8f/picunda"
-          src="/wp-content/uploads/2022/04/пицунда-главная-400x400.jpg"
-          alt="Пицунда"
-          name="Пицунда"
-        />
-        <Place
-          href="https://myapsny.ru/location/%d0%b0%d0%b1%d1%85%d0%b0%d0%b7%d0%b8%d1%8f/novyj-afon"
-          src="/wp-content/uploads/2024/08/afon-400x400.jpg"
-          alt="Новый Афон"
-          name="Новый Афон"
-        />
-        <Place
-          href="https://myapsny.ru/location/%d0%b0%d0%b1%d1%85%d0%b0%d0%b7%d0%b8%d1%8f/%d0%be%d0%b7%d0%b5%d1%80%d0%be-%d1%80%d0%b8%d1%86%d0%b0"
-          src="/wp-content/uploads/2024/05/riczaa-400x400.webp"
-          alt="Озеро Рица"
-          name="Озеро Рица"
-        />
-        <Place
-          href="https://myapsny.ru/location/%d0%b0%d0%b1%d1%85%d0%b0%d0%b7%d0%b8%d1%8f/gagra"
-          src="/wp-content/uploads/2022/04/гагра-главная-400x400.jpg"
-          alt="Гагра"
-          name="Гагра"
-        />
-        <Place
-          href="https://myapsny.ru/location/%d0%b0%d0%b1%d1%85%d0%b0%d0%b7%d0%b8%d1%8f/picunda"
-          src="/wp-content/uploads/2022/04/пицунда-главная-400x400.jpg"
-          alt="Пицунда"
-          name="Пицунда"
-        />
-        <Place
-          href="https://myapsny.ru/location/%d0%b0%d0%b1%d1%85%d0%b0%d0%b7%d0%b8%d1%8f/novyj-afon"
-          src="/wp-content/uploads/2024/08/afon-400x400.jpg"
-          alt="Новый Афон"
-          name="Новый Афон"
-        />
+      <Slider {...settings} className="places">
+        {placesData.map((place, index) => (
+          <Place
+            key={index}
+            href={place.href}
+            src={place.src}
+            alt={place.alt}
+            name={place.name}
+          />
+        ))}
       </Slider>
     </section>
   );

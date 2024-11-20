@@ -1,13 +1,13 @@
-.category {
+.advantage {
   text-align: center;
 }
 
-.category_img {
+.advantage_img {
   border-radius: 30px;
   width: 220px;
   margin: auto;
 }
 
-.category_text {
-  font-weight: 800;;
+.advantage_text {
+  font-weight: 800;
 }
