@@ -1,0 +1,21 @@
+.menu {
+  background: #23232399;
+  
+  position:relative;
+  z-index: 100;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ffffffcc;
+}
+
+.menu_block {
+  width: 100%;
+  height: 90px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}

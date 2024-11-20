@@ -1,0 +1,13 @@
+.category {
+  text-align: center;
+}
+
+.category_img {
+  border-radius: 30px;
+  width: 220px;
+  margin: auto;
+}
+
+.category_text {
+  font-weight: 800;;
+}

@@ -1,0 +1,13 @@
+.banner {
+  margin: auto;
+  margin-top: -90px;
+  padding-top: 90px;
+  background: url(/hero-bg.jpg) center center;
+  height: 310px;
+  position:relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+}
+
+.banner {}

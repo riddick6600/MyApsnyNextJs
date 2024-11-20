@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  async redirects() {
+    return [
+      {
+        source: '/wp-content/:slug*',
+        destination: 'https://myapsny.ru/wp-content/:slug*',
+        permanent: false
+      },
+    ]
+  },
+}
 
 export default nextConfig;

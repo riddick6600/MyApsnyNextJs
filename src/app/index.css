@@ -1,0 +1,22 @@
+html, body, * {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px;
+}
+
+.container__fluid {
+  margin: auto;
+  padding: 25px;
+}
+
+.container__silver {
+  background: #F7F8FA;
+}
+
+.text-center {
+  text-align: center;
+}

@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Navbar from '@/components/Navbar';
+import Header from '@/components/Header/Header';
 
 const meta = {
-  title: 'Home/Header/Navbar',
-  component: Navbar,
+  title: 'Header',
+  component: Header,
   parameters: {
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof Navbar>;
+} satisfies Meta<typeof Header>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Full: Story = {};

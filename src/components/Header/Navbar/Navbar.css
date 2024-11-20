@@ -1,0 +1,21 @@
+.top_social {
+  height: 42px;
+  width: 100%;
+
+  background: black;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top_social_block {
+  display: flex;
+  gap: 15px;
+}
+
+.top_social a {
+  text-decoration: none;
+  color: #ffffffcc;
+}

@@ -1,0 +1,14 @@
+.place_block {
+  text-align: center;
+}
+
+.place_block div {
+  color: silver;
+}
+
+.place_img {
+  border-radius: 30px;
+  width: 180px;
+  width: 180px;
+  margin: auto;
+}
