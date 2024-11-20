@@ -1,0 +1,76 @@
+.filter {
+  background: white;
+  border-radius: 100px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+  margin: -30px auto 0;
+  position: relative;
+  z-index: 10;
+}
+
+.filter_tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.filter_tab {
+  color: #6b7280;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter_tab.active {
+  background: #4F46E5;
+  color: white;
+}
+
+.filter_inputs {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  align-items: center;
+}
+
+.filter_input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.filter_input input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.filter_input label {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.filter_button {
+  background: #4F46E5;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filter_button:hover {
+  background: #4338CA;
+}
