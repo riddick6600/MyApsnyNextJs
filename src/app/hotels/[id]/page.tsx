@@ -1,24 +1,29 @@
+import { FC } from "react";
+import fetchData from "@/utils/fetch";
 import Hotel from "../Hotel";
+import Room from "../Room";
 
 export const revalidate = 60;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  const response = await fetch(
+  const response = await fetchData<{ data: Hotel[] }>(
     "http://localhost:1337/api/hotels?populate=*"
-  ).then((res) => res.json());
+  );
 
   return response.data.map((hotel: Hotel) => ({
     id: String(hotel.documentId),
   }));
 }
 
-export default async function Page({ params }: { params: { id: string } }) {
+type PageProps = { params: Promise<{ id: string }> };
+
+const Pages: FC<PageProps> = async ({ params }) => {
   const { id } = await params;
 
-  const response = await fetch(
+  const response = await fetchData<{ data: Hotel }>(
     `http://localhost:1337/api/hotels/${id}?populate=*`
-  ).then((res) => res.json());
+  );
 
   const hotel: Hotel = response.data;
 
@@ -28,7 +33,18 @@ export default async function Page({ params }: { params: { id: string } }) {
 
       <div dangerouslySetInnerHTML={{ __html: hotel.Description }}></div>
 
-      {hotel.photo && <img src={`http://localhost:1337${hotel.photo.url}`} />}
+      {hotel.photo && <img src={`http://localhost:1337/${hotel.photo.url}`} />}
+
+      <h2 id="rooms">Номера</h2>
+
+      {hotel.rooms?.map((room: Room) => (
+        <>
+          <h3>{room.name}</h3>
+          <p>{room.description}</p>
+        </>
+      ))}
     </main>
   );
-}
+};
+
+export default Pages;

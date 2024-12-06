@@ -1,3 +1,5 @@
+import Room from "./Room";
+
 export interface Hotel {
   id: string;
   documentId: string;
@@ -7,6 +9,7 @@ export interface Hotel {
   Description: string;
   photo?: { url: string };
   updatedAt: string; //Date
+  rooms: Room[];
 }
 
 export default Hotel;

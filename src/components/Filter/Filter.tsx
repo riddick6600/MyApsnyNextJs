@@ -4,7 +4,7 @@ import { FC, useState } from "react";
 import "./Filter.css";
 
 const Filter: FC = () => {
-  const [activeTab, setActiveTab] = useState("accommodation");
+  // const [activeTab, setActiveTab] = useState("accommodation");
   const [destination, setDestination] = useState("");
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");

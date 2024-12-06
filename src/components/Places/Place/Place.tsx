@@ -18,9 +18,9 @@ const Place: FC<PlaceProps> = ({ name, href, src, alt }) => {
       <div className="place_block">
         <h4>{name}</h4>
 
-        <div>{Math.round(Math.random() * 10 + 1)} Экскурсий</div>
-        <div>{Math.round(Math.random() * 10 + 1)} Отелей</div>
-        <div>{Math.round(Math.random() * 10 + 1)} Мероприятий</div>
+        <div>{name.length} Экскурсий</div>
+        <div>{name.length * 2} Отелей</div>
+        <div>{name.length * 3} Мероприятий</div>
       </div>
     </div>
   );
